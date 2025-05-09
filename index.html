@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>My Blog</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button id="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="featured-post">
+            <article>
+                <img src="images/OIP.webp" alt="Featured post image">
+                <div class="post-content">
+                    <h2>Featured Post: The Future of Web Development</h2>
+                    <p class="post-meta">Posted on <time datetime="2023-05-15">May 15, 2023</time> by Admin</p>
+                    <p>Exploring the latest trends and technologies shaping the future of web development...</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="recent-posts">
+            <h2>Recent Posts</h2>
+            <div class="posts-grid">
+                <article class="post-card">
+                    <img src="images/th.webp" alt="Post 1 image">
+                    <div class="post-content">
+                        <h3>Getting Started with React</h3>
+                        <p class="post-meta">Posted on <time datetime="2023-05-10">May 10, 2023</time> by Admin</p>
+                        <p>A beginner's guide to React.js and its core concepts...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <img src="images/download.webp" alt="Post 2 image">
+                    <div class="post-content">
+                        <h3>CSS Grid vs Flexbox</h3>
+                        <p class="post-meta">Posted on <time datetime="2023-05-05">May 5, 2023</time> by Admin</p>
+                        <p>When to use CSS Grid and when to stick with Flexbox...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-content">
+                        <h3>JavaScript ES6 Features</h3>
+                        <p class="post-meta">Posted on <time datetime="2023-04-28">April 28, 2023</time> by Admin</p>
+                        <p>Essential ES6 features every developer should know...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <h2>Subscribe to Our Newsletter</h2>
+            <form id="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <p id="form-message"></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 My Blog. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

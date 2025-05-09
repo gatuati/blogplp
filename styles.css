@@ -1,0 +1,473 @@
+/* Global Styles */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --success-color: #2ecc71;
+    --error-color: #e74c3c;
+    --border-radius: 4px;
+    --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode {
+    --primary-color: #2980b9;
+    --secondary-color: #34495e;
+    --light-color: #2c3e50;
+    --dark-color: #ecf0f1;
+    --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: var(--light-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: var(--box-shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+nav ul li a.active {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: 1.5rem;
+    transition: transform 0.3s;
+}
+
+#theme-toggle:hover {
+    transform: rotate(30deg);
+}
+
+/* Main Content Styles */
+main {
+    padding: 2rem 0;
+}
+
+.featured-post {
+    margin-bottom: 3rem;
+}
+
+.featured-post article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    background-color: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+.featured-post img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.post-content {
+    padding: 1.5rem;
+}
+
+.post-content h2 {
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.post-meta {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s;
+}
+
+.read-more:hover {
+    background-color: var(--secondary-color);
+}
+
+.recent-posts {
+    margin-bottom: 3rem;
+}
+
+.recent-posts h2 {
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.post-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+}
+
+.post-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.post-card .post-content {
+    padding: 1.5rem;
+}
+
+.post-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+/* Newsletter Styles */
+.newsletter {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.newsletter h2 {
+    margin-bottom: 1rem;
+}
+
+#newsletter-form {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#newsletter-form input {
+    flex: 1;
+    padding: 0.75rem;
+    border: none;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+#newsletter-form button {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#newsletter-form button:hover {
+    background-color: #1a252f;
+}
+
+#form-message {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+/* About Page Styles */
+.about-section {
+    background-color: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.about-section h2 {
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.about-section article {
+    margin-bottom: 2rem;
+}
+
+.about-section h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.about-section ul {
+    margin-left: 1.5rem;
+}
+
+.about-section li {
+    margin-bottom: 0.5rem;
+    list-style-type: disc;
+}
+
+/* Contact Page Styles */
+.contact-section {
+    background-color: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.contact-section h2 {
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.contact-section p {
+    margin-bottom: 2rem;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+#contact-form button {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: flex-start;
+}
+
+#contact-form button:hover {
+    background-color: var(--secondary-color);
+}
+
+#contact-message {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.contact-info {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+}
+
+.contact-info h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.contact-info ul li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info i {
+    margin-right: 0.75rem;
+    color: var(--primary-color);
+    width: 20px;
+    text-align: center;
+}
+
+.contact-info .social-links {
+    margin-top: 2rem;
+}
+
+.contact-info .social-links a {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    transition: color 0.3s;
+}
+
+.contact-info .social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .featured-post article {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav ul {
+        margin-top: 1rem;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 0 0.75rem;
+    }
+    
+    #newsletter-form {
+        flex-direction: column;
+    }
+    
+    #newsletter-form input {
+        border-radius: var(--border-radius);
+        margin-bottom: 0.5rem;
+    }
+    
+    #newsletter-form button {
+        border-radius: var(--border-radius);
+    }
+}
+
+@media (max-width: 576px) {
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .featured-post article {
+        grid-template-columns: 1fr;
+    }
+    
+    .featured-post img {
+        height: 250px;
+    }
+}
